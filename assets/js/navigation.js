@@ -10,7 +10,7 @@
     if ('IntersectionObserver' in window) {
       var navObserver = new IntersectionObserver(function(entries){ entries.forEach(function(entry){ if (entry.isIntersecting) { BRF.$$('#sideNav a').forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id); }); } }); }, {rootMargin:'-20% 0px -65% 0px', threshold:0.01});
       sections.forEach(function(s){ navObserver.observe(s); });
-      var revealObserver = new IntersectionObserver(function(entries){ entries.forEach(function(entry){ if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, {threshold:0.05});
+      var revealObserver = new IntersectionObserver(function(entries){ entries.forEach(function(entry){ if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, {threshold:0, rootMargin: '0px 0px -50px 0px'});
       BRF.$$('.reveal').forEach(function(s){ revealObserver.observe(s); });
     } else { BRF.$$('.reveal').forEach(function(s){ s.classList.add('visible'); }); }
     var back = BRF.$('#backTop');
