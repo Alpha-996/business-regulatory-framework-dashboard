@@ -8,7 +8,7 @@
     BRF.$$('#sideNav a').forEach(function(a){ a.addEventListener('click', function(e){ e.preventDefault(); var target = BRF.$(a.getAttribute('href')); if (target) target.scrollIntoView({behavior:'smooth', block:'start'}); closeMenu(); }); });
     var sections = BRF.$$('main section[id]');
     if ('IntersectionObserver' in window) {
-      var navObserver = new IntersectionObserver(function(entries){ entries.forEach(function(entry){ if (entry.isIntersecting) { BRF.$$('#sideNav a').forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id); }); } }); }, {rootMargin:'-20% 0px -65% 0px', threshold:0.01});
+      var navObserver = new IntersectionObserver(function(entries){ entries.forEach(function(entry){ if (entry.isIntersecting) { BRF.$$('#sideNav a').forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id); }); } }); }, {rootMargin:'-20% 0px -65% 0px', threshold:0});
       sections.forEach(function(s){ navObserver.observe(s); });
       var revealObserver = new IntersectionObserver(function(entries){ entries.forEach(function(entry){ if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, {threshold:0, rootMargin: '0px 0px -50px 0px'});
       BRF.$$('.reveal').forEach(function(s){ revealObserver.observe(s); });
