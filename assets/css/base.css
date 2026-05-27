@@ -1,0 +1,110 @@
+
+    :root {
+      color-scheme: light;
+      --bg: oklch(97% 0.008 185);
+      --surface: oklch(99% 0.006 185);
+      --surface-2: oklch(94% 0.012 185);
+      --surface-3: oklch(90% 0.016 185);
+      --text: oklch(22% 0.028 185);
+      --muted: oklch(45% 0.03 185);
+      --line: oklch(84% 0.02 185);
+      --primary: oklch(44% 0.105 185);
+      --primary-strong: oklch(34% 0.105 185);
+      --primary-soft: oklch(88% 0.06 185);
+      --danger: oklch(56% 0.16 28);
+      --danger-soft: oklch(91% 0.055 28);
+      --warning: oklch(71% 0.135 78);
+      --warning-soft: oklch(94% 0.045 78);
+      --info: oklch(58% 0.11 246);
+      --info-soft: oklch(91% 0.045 246);
+      --success: oklch(54% 0.105 145);
+      --success-soft: oklch(91% 0.052 145);
+      --shadow-sm: 0 4px 20px -2px oklch(36% 0.02 185 / 0.08);
+      --shadow: 0 18px 55px oklch(36% 0.02 185 / 0.12);
+      --shadow-hover: 0 12px 30px -8px oklch(36% 0.02 185 / 0.2);
+      --radius: 12px; /* Slightly rounder for a premium feel */
+      --focus: 0 0 0 3px oklch(77% 0.11 185 / 0.55);
+      --max: 1220px;
+      --sidebar: 280px;
+      --topbar-height: 64px;
+    }
+
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: oklch(15% 0.016 185);
+      --surface: oklch(19% 0.018 185);
+      --surface-2: oklch(24% 0.02 185);
+      --surface-3: oklch(29% 0.022 185);
+      --text: oklch(91% 0.012 185);
+      --muted: oklch(72% 0.018 185);
+      --line: oklch(35% 0.024 185);
+      --primary: oklch(70% 0.09 185);
+      --primary-strong: oklch(80% 0.075 185);
+      --primary-soft: oklch(27% 0.045 185);
+      --danger: oklch(69% 0.13 28);
+      --danger-soft: oklch(29% 0.055 28);
+      --warning: oklch(78% 0.12 78);
+      --warning-soft: oklch(31% 0.055 78);
+      --info: oklch(73% 0.09 246);
+      --info-soft: oklch(30% 0.05 246);
+      --success: oklch(70% 0.09 145);
+      --success-soft: oklch(29% 0.05 145);
+      --shadow-sm: 0 4px 20px -2px rgba(0,0,0,0.4);
+      --shadow: none;
+      --shadow-hover: 0 12px 30px -8px rgba(0,0,0,0.6);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(135deg, oklch(from var(--primary-soft) l c h / 0.3), transparent 35rem), var(--bg);
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    /* Elegant Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--line); border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+    a { color: inherit; }
+    button, input, select, textarea { font: inherit; }
+    button, select, input, textarea, summary { outline-offset: 3px; }
+    button:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible, a:focus-visible {
+      outline: none;
+      box-shadow: var(--focus);
+    }
+
+    /* Reading Progress Bar */
+    .reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: var(--primary);
+      z-index: 10000;
+      width: 0%;
+      transition: width 0.1s ease-out;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+
+    .skip-link {
+      position: fixed;
+      left: 1rem;
+      top: -4rem;
+      z-index: 1000;
+      padding: .75rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      transition: top 0.3s ease;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    /* Topbar Layout */
+    

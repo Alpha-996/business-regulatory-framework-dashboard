@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Business Regulatory Framework 7-Day Masterplan</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230f766e'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Arial,sans-serif' font-size='22' font-weight='700' fill='%23f7fbfa'%3EBRF%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/print.css">
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div id="readingProgress" class="reading-progress"></div>
+  
+  <a class="skip-link" href="#main">Skip to content</a>
+  
+  <header class="topbar no-print" id="topbar">
+    <div class="brand">
+      <button class="btn icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open navigation">&#9776;</button>
+      <div class="brand-mark" aria-hidden="true">BRF</div>
+      <div class="brand-text">
+        <span class="brand-title">Business Regulatory Framework</span>
+        <span class="brand-subtitle">7-day exam dashboard for B.Com Honours</span>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button class="btn ghost" id="themeToggle" type="button">Dark mode</button>
+      <button class="btn ghost" id="expandAll" type="button">Expand notes</button>
+      <button class="btn primary" id="printBtn" type="button">Print pack</button>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="layout">
+    <aside class="sidebar no-print" aria-label="Study dashboard navigation">
+      <div class="nav-label">Dashboard</div>
+      <nav class="side-nav" id="sideNav">
+        <a href="#hero">Hero dashboard</a>
+        <a href="#syllabus">Syllabus analysis</a>
+        <a href="#pyq">PYQ analysis</a>
+        <a href="#priority">Priority ranking</a>
+        <a href="#plan">7-day plan</a>
+        <a href="#notes">Summary notes</a>
+        <a href="#question-bank">Question bank</a>
+        <a href="#definitions">Definitions</a>
+        <a href="#differences">Difference tables</a>
+        <a href="#procedures-rights">Procedures & rights</a>
+        <a href="#templates">Answer templates</a>
+        <a href="#flashcards">Flashcards</a>
+        <a href="#quiz">Quiz mode</a>
+        <a href="#progress">Progress tracker</a>
+        <a href="#revision">Final 48 hours</a>
+        <a href="#strategy">90% strategy</a>
+      </nav>
+    </aside>
+
+    <main id="main">
+      <div class="main-inner">
+        <section class="section hero reveal" id="hero">
+          <div class="hero-grid">
+            <div class="animate-in" style="animation-delay: 0ms;">
+              <div class="pill-row">
+                <span class="tag very-high">Target 90%+</span>
+                <span class="tag high">7 days left</span>
+                <span class="tag medium">Beginner level</span>
+              </div>
+              <h1 style="margin-top:.5rem">Business Regulatory Framework: 7-Day Masterplan</h1>
+              <p class="lead">A focused study system for learning the full syllabus from scratch, using lecture-hour weightage plus the 2025 PYQ pattern to guide priority, practice, and revision.</p>
+              <div class="metric-grid" style="margin-top:1.5rem">
+                <div class="metric-card animate-in" style="animation-delay: 100ms;"><strong>60</strong><span>Total lecture hours</span></div>
+                <div class="metric-card animate-in" style="animation-delay: 200ms;"><strong>75</strong><span>Semester-end marks</span></div>
+                <div class="metric-card animate-in" style="animation-delay: 300ms;"><strong>5-6 h</strong><span>Daily study time</span></div>
+                <div class="metric-card animate-in" style="animation-delay: 400ms;"><strong>120</strong><span>PYQ offered marks mapped</span></div>
+              </div>
+            </div>
+            <div class="hero-panel animate-in" style="animation-delay: 200ms;">
+              <h3>Quick Priority Summary</h3>
+              <div class="compact-list">
+                <li><strong>Highest priority unit:</strong> Unit II, Indian Contract Act</li>
+                <li><strong>Most repeated PYQ unit:</strong> Unit II, 5 mapped question parts</li>
+                <li><strong>Best quick-scoring unit:</strong> Unit V, Consumer Protection definitions and councils</li>
+                <li><strong>Most conceptual unit:</strong> Unit II, contract formation, breach, quasi-contract</li>
+                <li><strong>Most memorization-heavy unit:</strong> Unit V and Unit IV procedures</li>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section reveal" id="syllabus">
+          <div class="section-header animate-in" style="animation-delay: 0ms;">
+            <div>
+              <h2>Syllabus Analysis</h2>
+              <p class="lead">Lecture-hour weightage shows where depth is expected. Use it with PYQ frequency, not as the only predictor.</p>
+            </div>
+          </div>
+          <div class="table-wrap animate-in" style="animation-delay: 100ms;" id="syllabusTable"></div>
+          <div class="three" style="margin-top:1.5rem" id="topicBuckets"></div>
+        </section>
+
+        <section class="section reveal" id="pyq">
+          <div class="section-header animate-in" style="animation-delay: 0ms;">
+            <div>
+              <h2>PYQ Analysis: 2025 Paper</h2>
+              <p class="lead">Marks below are offered marks in the question paper. Actual attempted marks differ because the paper has choices.</p>
+            </div>
+          </div>
+          <div class="table-wrap animate-in" style="animation-delay: 100ms;" id="pyqTable"></div>
+          <div class="chart-grid" id="pyqCharts" style="margin-top:1.5rem"></div>
+        </section>
+
+        <section class="section reveal" id="priority">
+          <div class="section-header animate-in" style="animation-delay: 0ms;">
+            <div>
+              <h2>Priority Ranking</h2>
+              <p class="lead">Predicted priority is based on syllabus weightage plus 2025 PYQ appearance. It is not a guarantee of future questions.</p>
+            </div>
+          </div>
+          <div class="three" id="priorityColumns"></div>
+        </section>
+
+        <section class="section reveal" id="plan">
+          <div class="section-header animate-in" style="animation-delay: 0ms;">
+            <div>
+              <h2>Complete 7-Day Study Plan</h2>
+              <p class="lead">Built for 5-6 hours per day. Each day includes learning, memorization, PYQ practice, and self-testing.</p>
+            </div>
+          </div>
+          <div class="table-wrap animate-in" style="animation-delay: 100ms;" id="studyPlanTable"></div>
+        </section>
+
+        <section class="section reveal" id="notes">
+          <div class="section-header animate-in" style="animation-delay: 0ms;">
+            <div>
+              <h2>Topic-Wise Summary Notes</h2>
+              <p class="lead">Beginner-friendly notes with exam keywords, examples, and answer-length guidance.</p>
+            </div>
+            <div class="pill-row no-print">
+              <button class="btn" type="button" data-open-notes="true">Open all</button>
+              <button class="btn" type="button" data-open-notes="false">Close all</button>
+            </div>
+          </div>
+          <div id="notesContainer"></div>
+        </section>
+
+        <section class="section reveal" id="question-bank">
+          <div class="section-header animate-in" style="animation-delay: 0ms;">
+            <div>
+              <h2>High-Yield Question Bank with Answers</h2>
+              <p class="lead">Search and filter model answer outlines. Probability means "high probability based on PYQ plus syllabus weightage."</p>
+            </div>
+          </div>
+          <div class="filters no-print animate-in" style="animation-delay: 100ms;">
+            <div class="field">
+              <label for="qbSearch">Search</label>
+              <input class="input" id="qbSearch" type="search" placeholder="Search questions, headings, keywords">
+            </div>
+            <div class="field">
+              <label for="qbUnit">Unit</label>
+              <select class="select" id="qbUnit"></select>
+            </div>
+            <div class="field">
+              <label for="qbMarks">Marks</label>
+              <select class="select" id="qbMarks"><option>All</option><option>5</option><option>10</option></select>
+            </div>
+            <div class="field">
+              <label for="qbType">Type</label>
+              <select class="select" id="qbType"></select>
+            </div>
+            <div class="field">
+              <label for="qbProb">Probability</label>
+              <select class="select" id="qbProb"></select>
+            </div>
+            <div class="field">
+              <label for="qbPriority">Priority</label>
+              <select class="select" id="qbPriority"></select>
+            </div>
+            <div class="field">
+              <label for="qbSource">Source</label>
+              <select class="select" id="qbSource"></select>
+            </div>
+          </div>
+          <p class="muted animate-in" style="animation-delay: 150ms;" id="qbCount" aria-live="polite"></p>
+          <div class="card-grid" id="questionCards"></div>
+        </section>
+
+        <section class="section reveal" id="definitions">
+          <div class="section-header animate-in" style="animation-delay: 0ms;">
+            <div>
+              <h2>Important Definitions Bank</h2>
+              <p class="lead">Use the simple version to understand; use the exam-style version in answers.</p>
+            </div>
+          </div>
+          <div class="card-grid" id="definitionCards"></div>
+        </section>
+
+        <section class="section reveal" id="differences">
+          <div class="section-header animate-in" style="animation-delay: 0ms;">
+            <div>
+              <h2>Difference Tables</h2>
+              <p class="lead">These are ready-made point tables for 5-mark and 10-mark distinction questions.</p>
+            </div>
+          </div>
+          <div id="differenceTables"></div>
+        </section>
+
+        <section class="section reveal" id="procedures-rights">
+          <div class="section-header animate-in" style="animation-delay: 0ms;">
+            <div>
+              <h2>Procedures and Rights/Remedies Bank</h2>
+              <p class="lead">Step-based and rights-based answers that frequently become 5-mark or 10-mark questions.</p>
+            </div>
+          </div>
+          <div class="card-grid" id="procedureCards"></div>
+        </section>
+
+        <section class="section reveal" id="templates">
+          <div class="section-header animate-in" style="animation-delay: 0ms;">
+            <div>
+              <h2>Reusable Answer Templates</h2>
+              <p class="lead">Apply these structures to almost any BRF question to avoid vague or unbalanced answers.</p>
+            </div>
+          </div>
+          <div class="card-grid" id="templateCards"></div>
+        </section>
+
+        <section class="section reveal" id="flashcards">
+          <div class="section-header animate-in" style="animation-delay: 0ms;">
+            <div>
+              <h2>Flashcard Mode</h2>
+              <p class="lead">Click the card to flip. Mastered cards are stored locally in this browser.</p>
+            </div>
+          </div>
+          <div class="flash-layout">
+            <div class="animate-in" style="animation-delay: 100ms;">
+              <div class="filters no-print" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); padding:0; background:transparent;">
+                <div class="field">
+                  <label for="flashUnit">Unit filter</label>
+                  <select class="select" id="flashUnit"></select>
+                </div>
+                <div class="field">
+                  <label for="flashCategory">Category</label>
+                  <select class="select" id="flashCategory"></select>
+                </div>
+                <div class="field">
+                  <label for="flashPriority">Priority</label>
+                  <select class="select" id="flashPriority"></select>
+                </div>
+                <div class="field">
+                  <label for="flashSearch">Search</label>
+                  <input class="input" id="flashSearch" type="search" placeholder="Search term or answer">
+                </div>
+                <label class="option" style="align-items:center; min-height:42px;"><input type="checkbox" id="flashUnmastered"> <span>Only unmastered</span></label>
+              </div>
+              <button class="flashcard" id="flashCard" type="button" aria-label="Flip flashcard" style="margin-top: 1rem;">
+                <span class="flash-inner">
+                  <span class="flash-face front">
+                    <span class="tag medium" id="flashMeta"></span>
+                    <strong id="flashFront"></strong>
+                    <span class="muted">Click to reveal answer</span>
+                  </span>
+                  <span class="flash-face back">
+                    <span class="tag revision">Answer</span>
+                    <strong id="flashBack"></strong>
+                    <span class="muted" id="flashHint"></span>
+                  </span>
+                </span>
+              </button>
+            </div>
+            <aside class="info-card animate-in" style="animation-delay: 200ms;">
+              <h3>Controls</h3>
+              <div class="pill-row no-print" style="margin:1rem 0">
+                <button class="btn" id="prevFlash" type="button">Previous</button>
+                <button class="btn" id="nextFlash" type="button">Next</button>
+                <button class="btn" id="shuffleFlash" type="button">Shuffle</button>
+                <button class="btn primary" style="width:100%" id="masterFlash" type="button">Mark mastered</button>
+              </div>
+              <p id="flashStatus" class="muted" aria-live="polite"></p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section reveal" id="quiz">
+          <div class="section-header animate-in" style="animation-delay: 0ms;">
+            <div>
+              <h2>Quiz Mode</h2>
+              <p class="lead">Five readiness quiz sets with MCQ, true-false, statement-based, and short-answer prompts.</p>
+            </div>
+          </div>
+          <div class="filters no-print animate-in" style="animation-delay: 100ms;">
+            <div class="field">
+              <label for="quizSet">Quiz set</label>
+              <select class="select" id="quizSet"></select>
+            </div>
+            <div class="field">
+              <label for="quizUnit">Quiz unit</label>
+              <select class="select" id="quizUnit"></select>
+            </div>
+            <div class="field">
+              <label for="quizMode">Question type</label>
+              <select class="select" id="quizMode"><option>All</option><option>MCQ</option><option>True/False</option><option>Short</option><option>Statement-based</option></select>
+            </div>
+            <div class="field">
+              <label>&nbsp;</label>
+              <button class="btn primary" id="restartQuiz" type="button">Restart set</button>
+            </div>
+          </div>
+          <div class="quiz-panel animate-in" style="animation-delay: 200ms;" id="quizPanel"></div>
+        </section>
+
+        <section class="section reveal" id="progress">
+          <div class="section-header animate-in" style="animation-delay: 0ms;">
+            <div>
+              <h2>Daily Progress Tracker</h2>
+              <p class="lead">Tick tasks as you complete them. Progress is saved in localStorage.</p>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <div class="animate-in" style="animation-delay: 100ms;">
+              <div class="pill-row" style="justify-content:space-between; margin-bottom:0.25rem;">
+                <strong id="progressLabel" style="font-size: 1.1rem; color: var(--text);">0% complete</strong>
+                <button class="btn ghost no-print" id="resetProgress" type="button">Reset progress</button>
+              </div>
+              <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+            </div>
+            <div class="checklist" id="checklist"></div>
+          </div>
+        </section>
+
+        <section class="section reveal" id="revision">
+          <div class="section-header animate-in" style="animation-delay: 0ms;">
+            <div>
+              <h2>Final 48-Hour Revision Plan</h2>
+              <p class="lead">This section is designed for exam survival: revise what pays, stop expanding the syllabus, and practice writing under time.</p>
+            </div>
+          </div>
+          <div class="three" id="revisionCards"></div>
+        </section>
+
+        <section class="section reveal" id="strategy">
+          <div class="section-header animate-in" style="animation-delay: 0ms;">
+            <div>
+              <h2>90%+ Scoring Strategy</h2>
+              <p class="lead">A practical answer-writing and exam-hall system for Group A and Group B.</p>
+            </div>
+          </div>
+          <div class="three" id="strategyCards"></div>
+          <div class="source-note animate-in" style="animation-delay: 400ms; margin-top:1.5rem">
+            Source check: statutory definitions were kept exam-appropriate and verified against official or government sources including India Code pages/PDFs for the Indian Contract Act, 1872; Sale of Goods Act, 1930; Indian Partnership Act, 1932; Limited Liability Partnership Act, 2008; Consumer Protection Act, 2019; and the Department of Consumer Affairs Consumer Protection Acts page.
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <button class="btn icon-btn back-top no-print" id="backTop" type="button" aria-label="Back to top">&uarr;</button>
+
+  
+  <script src="assets/data/syllabus-data.js"></script>
+  <script src="assets/data/pyq-data.js"></script>
+  <script src="assets/data/notes-data.js"></script>
+  <script src="assets/data/questions-data.js"></script>
+  <script src="assets/data/definitions-data.js"></script>
+  <script src="assets/data/differences-data.js"></script>
+  <script src="assets/data/procedures-rights-data.js"></script>
+  <script src="assets/data/templates-data.js"></script>
+  <script src="assets/data/revision-strategy-data.js"></script>
+  <script src="assets/data/flashcards-data.js"></script>
+  <script src="assets/data/quiz-data.js"></script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/renderers.js"></script>
+  <script src="assets/js/filters.js"></script>
+  <script src="assets/js/flashcards.js"></script>
+  <script src="assets/js/quiz.js"></script>
+  <script src="assets/js/progress.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/print.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

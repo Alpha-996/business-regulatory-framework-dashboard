@@ -1,0 +1,14 @@
+@media print {
+      :root { --bg: #fff; --surface: #fff; --surface-2: #f8f9fa; --text: #000; --muted: #666; --line: #ddd; --shadow: none; --shadow-sm: none; --shadow-hover: none; }
+      body { background: #fff; color: #000; }
+      .topbar, .sidebar, .sidebar-overlay, .back-top, .no-print, .filters, .section-header .pill-row, .flash-layout aside, .quiz-panel .btn, .progress-wrap .btn, .reading-progress { display: none !important; }
+      .layout { display: block; margin-top: 0; }
+      main { padding: 0; margin: 0; }
+      .main-inner { max-width: none; gap: 1rem; }
+      .section { break-inside: avoid; box-shadow: none; border-radius: 0; border: 0; border-bottom: 1px solid var(--line); padding: 1rem 0; }
+      details:not([open]) .details-body { display: block; }
+      details { border: none !important; }
+      table { font-size: 10pt; }
+      th { position: static; background: transparent; }
+    }
+@media print{#procedures-rights{display:block!important}.no-print{display:none!important}}
